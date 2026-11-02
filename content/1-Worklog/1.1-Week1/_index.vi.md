@@ -1,59 +1,35 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-10-09
 weight: 1
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: "1.1 "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững các khái niệm nền tảng về **Điện toán đám mây (Cloud Computing)** và **Hạ tầng toàn cầu AWS (Global Infrastructure)**.
+* Hiểu cơ chế bảo mật và phân quyền với **AWS IAM (Identity & Access Management)** — nền móng để cấp quyền cho các dịch vụ Data sau này.
+* Tìm hiểu kiến trúc máy chủ ảo **Amazon EC2** và ổ cứng lưu trữ khối **Amazon EBS**.
+* Thiết lập môi trường tự học và giả lập dịch vụ AWS trên máy cá nhân (LocalStack, Docker, AWS CLI) mà không cần thẻ tín dụng / tài khoản AWS trả phí.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Các đề mục kiến thức cần học & nghiên cứu trong tuần:
 
-### Kết quả đạt được tuần 1:
+| Thứ | Chủ đề trọng tâm | Chi tiết nội dung cần tìm hiểu & Từ khóa cốt lõi | Tài liệu & Môi trường thực hành đề xuất |
+| :---: | :--- | :--- | :--- |
+| **Thứ 6** | **Cloud Fundamentals & AWS Infra** | • **Khái niệm Cloud:** IaaS vs PaaS vs SaaS; Public vs Private vs Hybrid Cloud.<br>• **AWS Global Infrastructure:** Regions, Availability Zones (AZs), Data Centers, Edge Locations / CloudFront PoPs.<br>• **Mô hình trách nhiệm:** AWS Shared Responsibility Model (Bảo mật CỦA đám mây vs BẢO MẬT TRONG đám mây). | • [AWS Global Infrastructure Overview](https://aws.amazon.com/about-aws/global-infrastructure/)<br>• [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) |
+| **Thứ 7** | **AWS IAM (Bảo mật & Phân quyền)** | • **Root Account:** Vì sao phải khóa Root và bật MFA.<br>• **IAM Entities:** IAM Users, Groups, Roles, Policies.<br>• **IAM Policies JSON:** Cấu trúc Effect (Allow/Deny), Action, Resource, Condition.<br>• **IAM Role vs User:** Khi nào dùng Role (cho EC2, Lambda, Glue) thay vì User credential cứng. | • [AWS IAM Core Concepts](https://docs.aws.amazon.com/iam/latest/UserGuide/introduction.html)<br>• [AWS Policy Generator](https://awspolicygen.s3.amazonaws.com/policygen.html) |
+| **Thứ 2** | **Công cụ quản trị & Giả lập Local** | • **AWS CLI v2:** Cài đặt trên máy cục bộ, lệnh `aws configure`, quản lý named profiles.<br>• **Giải pháp học không cần thẻ:** Tìm hiểu **LocalStack** (giả lập AWS cục bộ qua Docker) và **AWS Educate** (tài khoản học tập không cần thẻ tín dụng). | • [Cài đặt AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)<br>• [LocalStack Getting Started](https://docs.localstack.cloud/getting-started/) |
+| **Thứ 3** | **Amazon EC2 (Máy chủ ảo)** | • **EC2 Architecture:** CPU, vCPU, RAM, Instance Types (T-series General Purpose, C-series Compute, R-series Memory cho Big Data).<br>• **AMI (Amazon Machine Image):** Linux 2023, Ubuntu, Custom AMI.<br>• **Bảo mật EC2:** SSH Key Pairs (.pem / .ppk), Security Groups (Inbound / Outbound rules).<br>• **Cơ chế kết nối:** SSH, EC2 Instance Connect, AWS Systems Manager (SSM) Session Manager. | • [Amazon EC2 Basics](https://docs.aws.amazon.com/ec2/latest/userguide/concepts.html)<br>• Video: AWS EC2 Explained - freeCodeCamp / AWS Skill Builder |
+| **Thứ 4** | **Amazon EBS (Lưu trữ khối)** | • **Khái niệm EBS Volume:** Gắn vào 1 EC2 trong cùng 1 AZ (Network Drive).<br>• **Phân loại Volume:** General Purpose SSD (gp2, gp3), Provisioned IOPS SSD (io1, io2), Throughput Optimized HDD (st1 cho Big Data/Logs).<br>• **EBS Snapshots:** Cơ chế sao lưu gia tăng (Incremental Backup), lưu trên S3 ngầm định. | • [Amazon EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) |
+| **Thứ 5** | **Tổng kết & Tự đánh giá** | • Ôn tập sơ đồ liên kết: IAM Role -> EC2 -> Gắn EBS Volume.<br>• Trả lời bộ câu hỏi trắc nghiệm kiến thức Tuần 1 (chuẩn đề thi Cloud Practitioner / SAA).<br>• Hoàn thiện ghi chú kỹ thuật cá nhân. | • [AWS Skill Builder Free Courses](https://explore.skillbuilder.aws/) |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Tiêu chí & Năng lực cần đạt sau tuần 1:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+1. **Hiểu rõ bản chất:** Giải thích được vì sao doanh nghiệp chuyển từ On-premise lên Cloud và cách chọn Region tối ưu (độ trễ, chi phí, luật dữ liệu).
+2. **Nắm vững IAM:** Viết và đọc hiểu được một JSON IAM Policy cơ bản (ví dụ: cấp quyền chỉ đọc S3 cho một IAM Role).
+3. **Hiểu sâu EC2 & EBS:** Phân biệt được sự khác biệt giữa Instance Store (lưu trữ tạm mất khi stop) và EBS (bền vững), biết chọn loại EC2 phù hợp khi chạy tác vụ xử lý dữ liệu (RAM-intensive vs CPU-intensive).

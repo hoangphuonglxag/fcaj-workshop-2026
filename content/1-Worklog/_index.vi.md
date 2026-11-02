@@ -1,40 +1,49 @@
 ---
 title: "Nhật ký công việc"
-date: 2024-01-01
+date: 2026-10-09
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Trang này tổng hợp nhật ký công việc (Worklog) theo từng tuần trong suốt quá trình tham gia chương trình **Workforce Bootcamp - First Cloud AI Journey (FCAJ)** với định hướng chuyên sâu **Cloud Data Engineer**.
 
-**Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
+Lộ trình thực tập được thiết kế gồm 12 tuần, đi từ nền tảng điện toán đám mây, kiến trúc hạ tầng mạng, lưu trữ và cơ sở dữ liệu, cho đến xây dựng các đường ống dữ liệu (Data Pipelines), xử lý phân tán (Distributed Processing), Data Lakehouse và tối ưu chi phí:
 
+### 📌 Lộ trình thực tập 12 tuần (Định hướng Cloud Data Engineer):
 
-Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
+* **[Tuần 1: Onboarding, AWS Fundamentals, IAM & Compute (EC2, CLI)](1.1-week1/)**
+  * Làm quen văn hóa FCAJ, tìm hiểu AWS Global Infrastructure, quản lý danh tính và phân quyền (IAM), thiết lập AWS CLI và khởi tạo máy chủ EC2.
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
+* **[Tuần 2: Mạng & Bảo mật hạ tầng: Custom VPC, Subnets, NAT & VPC Endpoints](1.2-week2/)**
+  * Thiết kế mạng nội bộ VPC chuẩn Multi-AZ, cấu hình Public/Private Subnet, NAT Gateway, Security Group/NACL và thiết lập VPC Endpoints cho các dịch vụ dữ liệu an toàn.
 
-**Tuần 2:** [Làm công việc A...](1.2-week2/)
+* **[Tuần 3: Lưu trữ & Cơ sở dữ liệu: Amazon S3 Data Lake, RDS & DynamoDB](1.3-week3/)**
+  * Nắm vững Amazon S3 làm nền tảng Data Lake, phân vùng dữ liệu (Partitioning), cấu hình vòng đời (Lifecycle Rules), triển khai Relational Database (RDS) và NoSQL (DynamoDB).
 
-**Tuần 3:** [Làm công việc B...](1.3-week3/)
+* **[Tuần 4: Serverless Computing & Tự động hóa Pipeline: Lambda, S3 Triggers, CloudWatch](1.4-week4/)**
+  * Xây dựng kiến trúc xử lý sự kiện (Event-driven) với AWS Lambda, tự động kích hoạt ETL khi có dữ liệu mới trên S3, giám sát và cảnh báo hệ thống qua CloudWatch & EventBridge.
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+* **[Tuần 5: Thu thập & Tiếp nhận dữ liệu thời gian thực (Data Ingestion & Streaming)](1.5-week5/)**
+  * Tìm hiểu các luồng dữ liệu thời gian thực với Amazon Kinesis Data Streams / Firehose và Amazon MSK (Managed Streaming for Kafka).
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+* **[Tuần 6: Quản lý Metadata & Truy vấn dữ liệu Serverless: AWS Glue Catalog & Athena](1.6-week6/)**
+  * Thu thập lược đồ dữ liệu tự động bằng Glue Crawler, quản trị Data Catalog và thực thi truy vấn phân tích SQL trực tiếp trên S3 với Amazon Athena.
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+* **[Tuần 7: Xử lý dữ liệu Batch & Chuyển đổi ETL: AWS Glue Studio & PySpark](1.7-week7/)**
+  * Phát triển các Glue ETL Jobs chuyển đổi dữ liệu từ Raw sang Parquet/Iceberg, làm sạch và chuẩn hóa dữ liệu lớn serverless.
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+* **[Tuần 8: Xử lý dữ liệu phân tán quy mô lớn: Amazon EMR & Apache Spark](1.8-week8/)**
+  * Khởi tạo và quản trị cụm EMR (Elastic MapReduce), chạy các tác vụ Spark & Hadoop xử lý dữ liệu lớn.
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
+* **[Tuần 9: Kho dữ liệu hiện đại (Data Warehousing): Amazon Redshift & Redshift Serverless](1.9-week9/)**
+  * Thiết kế cấu trúc bảng, khóa phân vùng (Distribution Keys), Sort Keys và nạp dữ liệu vào Amazon Redshift phục vụ Business Intelligence.
 
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
+* **[Tuần 10: Điều phối & Tự động hóa đường ống dữ liệu: Amazon MWAA (Airflow)](1.10-week10/)**
+  * Xây dựng và quản lý các luồng DAGs điều phối toàn diện hệ thống ETL phức tạp bằng Apache Airflow trên AWS.
 
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
+* **[Tuần 11: Quản trị dữ liệu, Bảo mật chuyên sâu & Tối ưu chi phí](1.11-week11/)**
+  * Phân quyền chi tiết tới cấp dòng/cột với AWS Lake Formation, mã hóa dữ liệu với AWS KMS và tối ưu hóa chi phí vận hành hạ tầng dữ liệu.
 
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
-
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+* **[Tuần 12: Hoàn thiện Workshop, Capstone Project & Tổng kết thực tập](1.12-week12/)**
+  * Tổng kết đồ án thực tập End-to-End Cloud Data Platform, viết tài liệu kỹ thuật và báo cáo bảo vệ thực tập.

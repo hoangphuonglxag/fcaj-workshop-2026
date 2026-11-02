@@ -1,57 +1,35 @@
 ---
 title: "Week 1 Worklog"
-date: 2024-01-01
+date: 2026-10-09
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master fundamental concepts of **Cloud Computing** and **AWS Global Infrastructure**.
+* Understand security and access governance via **AWS IAM (Identity & Access Management)** — the foundation for data service authorization.
+* Learn core compute and storage architectures: **Amazon EC2** and **Amazon EBS**.
+* Set up a local study environment and explore AWS simulation tools (LocalStack, Docker, AWS CLI) without requiring a credit card or paid AWS account.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Core Learning Topics & Research Modules This Week:
 
-### Week 1 Achievements:
+| Day | Focus Area | Detailed Study Topics & Core Keywords | Recommended Resources & Emulation Tools |
+| :---: | :--- | :--- | :--- |
+| **Fri** | **Cloud Fundamentals & AWS Infra** | • **Cloud Paradigms:** IaaS vs PaaS vs SaaS; Public vs Private vs Hybrid Cloud.<br>• **AWS Global Infrastructure:** Regions, Availability Zones (AZs), Data Centers, Edge Locations / CloudFront PoPs.<br>• **Responsibility Model:** AWS Shared Responsibility Model (Security OF the Cloud vs Security IN the Cloud). | • [AWS Global Infrastructure Overview](https://aws.amazon.com/about-aws/global-infrastructure/)<br>• [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) |
+| **Sat** | **AWS IAM (Security & Permissions)** | • **Root Account:** Why the root account must be secured with MFA and locked.<br>• **IAM Entities:** IAM Users, Groups, Roles, Policies.<br>• **IAM Policies JSON:** Structure of Effect (Allow/Deny), Action, Resource, Condition.<br>• **IAM Roles vs Users:** When to use Roles (for EC2, Lambda, Glue) instead of hardcoded long-term credentials. | • [AWS IAM Core Concepts](https://docs.aws.amazon.com/iam/latest/UserGuide/introduction.html)<br>• [AWS Policy Generator](https://awspolicygen.s3.amazonaws.com/policygen.html) |
+| **Mon** | **Management Tools & Local Emulation** | • **AWS CLI v2:** Installation, `aws configure`, managing named profiles.<br>• **No-Credit-Card Learning:** Exploring **LocalStack** (AWS local cloud emulator via Docker) and **AWS Educate** (free training accounts without credit cards). | • [AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)<br>• [LocalStack Documentation](https://docs.localstack.cloud/getting-started/) |
+| **Tue** | **Amazon EC2 (Virtual Compute)** | • **EC2 Architecture:** vCPU, RAM, Instance families (T-series General Purpose, C-series Compute, R-series Memory for Big Data).<br>• **AMI (Amazon Machine Image):** Linux 2023, Ubuntu, Custom AMI.<br>• **EC2 Security:** SSH Key Pairs (.pem / .ppk), Security Groups (Stateful firewall rules).<br>• **Connection Mechanics:** SSH, EC2 Instance Connect, AWS Systems Manager (SSM) Session Manager. | • [Amazon EC2 Basics](https://docs.aws.amazon.com/ec2/latest/userguide/concepts.html)<br>• Video: AWS EC2 Deep Dive - AWS Skill Builder |
+| **Wed** | **Amazon EBS (Block Storage)** | • **EBS Volume Concepts:** Network-attached storage within a single AZ.<br>• **Volume Types:** General Purpose SSD (gp2, gp3), Provisioned IOPS SSD (io1, io2), Throughput Optimized HDD (st1 for large streaming/batch logs).<br>• **EBS Snapshots:** Incremental backup mechanism backed by S3. | • [Amazon EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) |
+| **Thu** | **Synthesis & Self-Assessment** | • Review connection model: IAM Role -> EC2 -> Attached EBS Volume.<br>• Practice sample practice questions (aligned with Cloud Practitioner & SAA).<br>• Complete personal study notes and architecture cheatsheet. | • [AWS Skill Builder Free Learning](https://explore.skillbuilder.aws/) |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Target Outcomes & Competency Checklist:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+1. **Foundational Clarity:** Able to explain why enterprises migrate to cloud and how to choose optimal regions (latency, cost, compliance).
+2. **IAM Proficiency:** Capable of reading and drafting JSON IAM Policies (e.g., granting read-only S3 access to a specific role).
+3. **Compute & Storage Discernment:** Clear differentiation between ephemeral Instance Store and persistent EBS; knowing which EC2 type suits data workloads.
